@@ -1,11 +1,16 @@
 #pragma once
 #include "InputComponent.h"
-class RotationIC :
+class ThrustIC :
 	public InputComponent
 {
+private:
+	// key_
+	SDL_Keycode key_;
+	double thrust_;
+	double speedLimit_;
 public:
-	RotationIC();
-	virtual ~RotationIC();
+	ThrustIC();
+	virtual ~ThrustIC();
 	void handleInput(Container* c, Uint32 time, const SDL_Event& event);
 };
 

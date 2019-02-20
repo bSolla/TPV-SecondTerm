@@ -2,6 +2,9 @@
 #include "Container.h"
 #include "ImageGC.h"
 #include "NaturalMovePC.h"
+#include "RotationIC.h"
+#include "ThrustIC.h"
+#include"ReduceSpeedPC.h"
 #include "ShowUpAtOppositeSidePC.h"
 
 class Fighter :
@@ -17,9 +20,11 @@ private:
 	ImageGC fighterImage_;
 	NaturalMovePC naturalMove_;
 	ShowUpAtOppositeSidePC oppositeSide_;
-	/*RotationIC rotation_;
+
+	// TODO: revisar constructoras ------------------ 
+	RotationIC rotation_;
 	ThrustIC thrust_;
 	ReduceSpeedPC reduceSpeed_;
-	GunIC normalGun_;*/
+	//GunIC normalGun_;
 };
 

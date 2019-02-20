@@ -27,6 +27,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameObjectPool.h" />
     <ClInclude Include="GraphicsComponent.h" />
+    <ClInclude Include="GunIC.h" />
     <ClInclude Include="ImageGC.h" />
     <ClInclude Include="InputComponent.h" />
     <ClInclude Include="Messages_decl.h" />
@@ -35,6 +36,7 @@
     <ClInclude Include="Observer.h" />
     <ClInclude Include="PhysicsComponent.h" />
     <ClInclude Include="RandomNumberGenerator.h" />
+    <ClInclude Include="ReduceSpeedPC.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="RotationIC.h" />
     <ClInclude Include="SDLAudioManager.h" />
@@ -48,6 +50,7 @@
     <ClInclude Include="StopOnBordersPC.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TexturesManager.h" />
+    <ClInclude Include="ThrustIC.h" />
     <ClInclude Include="Vector2D.h" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +70,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObjectPool.cpp" />
     <ClCompile Include="GraphicsComponent.cpp" />
+    <ClCompile Include="GunIC.cpp" />
     <ClCompile Include="ImageGC.cpp" />
     <ClCompile Include="InputComponent.cpp" />
     <ClCompile Include="main.cpp" />
@@ -74,6 +78,7 @@
     <ClCompile Include="Observer.cpp" />
     <ClCompile Include="PhysicsComponent.cpp" />
     <ClCompile Include="RandomNumberGenerator.cpp" />
+    <ClCompile Include="ReduceSpeedPC.cpp" />
     <ClCompile Include="Resources.cpp" />
     <ClCompile Include="RotationIC.cpp" />
     <ClCompile Include="SDLAudioManager.cpp" />
@@ -86,6 +91,7 @@
     <ClCompile Include="StopOnBordersPC.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TexturesManager.cpp" />
+    <ClCompile Include="ThrustIC.cpp" />
     <ClCompile Include="Vector2D.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

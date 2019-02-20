@@ -9,6 +9,9 @@ Fighter::Fighter(SDLGame* game):
 	addC(&fighterImage_);
 	addC(&naturalMove_);
 	addC(&oppositeSide_);
+	addC(&rotation_);
+	addC(&thrust_);
+	addC(&reduceSpeed_);
 
 	reset();
 }
