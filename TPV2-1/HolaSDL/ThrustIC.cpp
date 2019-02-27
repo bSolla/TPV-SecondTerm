@@ -2,20 +2,17 @@
 
 
 
-ThrustIC::ThrustIC()
-{
-	key_ = SDLK_UP;
-	thrust_ = 0.5;
-	speedLimit_ = 2.0;
+ThrustIC::ThrustIC(SDL_Keycode key, double thrust, double speedLimit) {
+	key_ = key;
+	thrust_ = thrust;
+	speedLimit_ = speedLimit;
 }
 
 
-ThrustIC::~ThrustIC()
-{
+ThrustIC::~ThrustIC() {
 }
 
-void ThrustIC::handleInput(Container * c, Uint32 time, const SDL_Event & event)
-{
+void ThrustIC::handleInput(Container * c, Uint32 time, const SDL_Event & event) {
 	if (event.type == SDL_KEYDOWN && event.key.keysym.sym == key_) {
 		c->setVelocity(c->getVelocity() + (Vector2D(0, -1).rotate(c->getRotation())*thrust_));
 

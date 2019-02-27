@@ -2,6 +2,8 @@
 
 #include "GameObject.h"
 
+#include "Constants.h"
+
 class Component;
 class InputComponent;
 class PhysicsComponent;

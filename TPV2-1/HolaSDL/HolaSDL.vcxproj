@@ -17,6 +17,7 @@
     <ClInclude Include="BoundingBoxGC.h" />
     <ClInclude Include="Collisions.h" />
     <ClInclude Include="Component.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="Container.h" />
     <ClInclude Include="DemoContainer.h" />
     <ClInclude Include="DemoGC.h" />

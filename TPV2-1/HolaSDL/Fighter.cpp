@@ -3,9 +3,11 @@
 
 
 Fighter::Fighter(SDLGame* game):
-	Container(game),
-	fighterImage_(game->getServiceLocator()->getTextures()->getTexture(Resources::Airplanes), {47, 90, 207, 250})
-{
+		Container(game),
+		fighterImage_(game->getServiceLocator()->getTextures()->getTexture(Resources::Airplanes), {47, 90, 207, 250}), 
+		reduceSpeed_(REDUCE_SPEED_FACTOR),
+		thrust_(THRUST_KEY, THRUST_VALUE, SPEED_LIMIT),
+		rotation_(ROTATE_CLOCKWISE, ROTATE_COUNTERCLOCKWISE, ALPHA) {
 	addC(&fighterImage_);
 	addC(&naturalMove_);
 	addC(&oppositeSide_);

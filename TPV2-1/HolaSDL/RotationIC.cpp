@@ -2,23 +2,23 @@
 
 
 
-RotationIC::RotationIC()
-{
+RotationIC::RotationIC(SDL_Keycode clockwiseKey, SDL_Keycode counterClockwiseKey, double alpha) {
+	clockwiseKey_ = clockwiseKey_;
+	counterClockwiseKey_ = counterClockwiseKey;
+	alpha_ = alpha;
 }
 
 
-RotationIC::~RotationIC()
-{
+RotationIC::~RotationIC() {
 }
 
-void RotationIC::handleInput(Container * c, Uint32 time, const SDL_Event & event)
-{
+void RotationIC::handleInput(Container * c, Uint32 time, const SDL_Event & event) {
 	if (event.type == SDL_KEYDOWN) {
-		if (event.key.keysym.sym == SDLK_LEFT) {
-			c->setRotation(c->getRotation() - 5);
+		if (event.key.keysym.sym == counterClockwiseKey_) {
+			c->setRotation(c->getRotation() - alpha_);
 		}
-		else if (event.key.keysym.sym == SDLK_RIGHT) {
-			c->setRotation(c->getRotation() + 5);
+		else if (event.key.keysym.sym == clockwiseKey_) {
+			c->setRotation(c->getRotation() + alpha_);
 		}
 	}
 }

@@ -2,17 +2,14 @@
 
 
 
-ReduceSpeedPC::ReduceSpeedPC()
-{
-	factor_ = 0.995;
+ReduceSpeedPC::ReduceSpeedPC(double factor) {
+	factor_ = factor;
 }
 
 
-ReduceSpeedPC::~ReduceSpeedPC()
-{
+ReduceSpeedPC::~ReduceSpeedPC() {
 }
 
-void ReduceSpeedPC::update(Container * c, Uint32 time)
-{
+void ReduceSpeedPC::update(Container * c, Uint32 time) {
 	c->setVelocity(c->getVelocity()*factor_);
 }
