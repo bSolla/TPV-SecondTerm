@@ -14,8 +14,10 @@ Fighter::Fighter(SDLGame* game):
 	addC(&rotation_);
 	addC(&thrust_);
 	addC(&reduceSpeed_);
+	addC(&normalGun_);
 
 	reset();
+	setId (msg::Fighter);
 }
 
 

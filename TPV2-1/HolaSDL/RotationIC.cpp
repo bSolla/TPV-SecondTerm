@@ -3,7 +3,7 @@
 
 
 RotationIC::RotationIC(SDL_Keycode clockwiseKey, SDL_Keycode counterClockwiseKey, double alpha) {
-	clockwiseKey_ = clockwiseKey_;
+	clockwiseKey_ = clockwiseKey;
 	counterClockwiseKey_ = counterClockwiseKey;
 	alpha_ = alpha;
 }
