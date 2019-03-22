@@ -5,6 +5,7 @@
 #include "DemoContainer.h"
 #include "Fighter.h"
 #include "Asteroids.h"
+#include "Bullets.h"
 #include "SDLGame.h"
 #include "GameObject.h"
 
@@ -33,4 +34,5 @@ private:
 	DemoContainer demoContainer_;
 	Fighter fighter_;
 	Asteroids asteroids_;
+	Bullets bullets_;
 };
