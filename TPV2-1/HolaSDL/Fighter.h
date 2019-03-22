@@ -15,6 +15,7 @@ public:
 	Fighter(SDLGame* game);
 	virtual ~Fighter();
 	void reset();
+	virtual void receive (const void* senderObj, const msg::Message& msg) { Container::receive (senderObj, msg); }
 
 private:
 	//…

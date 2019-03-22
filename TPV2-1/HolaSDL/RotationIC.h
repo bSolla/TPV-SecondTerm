@@ -12,8 +12,9 @@ public:
 
 	void handleInput(Container* c, Uint32 time, const SDL_Event& event);
 
-	virtual void receive (const void* senderObj, const msg::Message& msg) {
-		cout << "bullet\n";
+	// TODO: clean after debugging
+	virtual void receive (Container* c, const msg::Message& msg) {
+		cout << "got to RotationIC::receive\n";
 	}
 };
 

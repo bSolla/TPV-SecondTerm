@@ -109,6 +109,7 @@ void SDLGame::addObserver(Observer* o) {
 }
 
 void SDLGame::send(const void* senderObj, const msg::Message& msg) {
+	cout << "got to game::send\n";
 	for (Observer* o : observers_) {
 		if (senderObj != o) {
 			if (msg.destination_ == msg::Broadcast // we send to everyone, even to the one from whom we received the message!
