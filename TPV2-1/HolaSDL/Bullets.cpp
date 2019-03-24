@@ -12,15 +12,32 @@ Bullets::Bullets(SDLGame* game):
 		b->addC(&deactivate_);
 	}
 
-	Bullet *a = getUnusedObject();
-	a->setWidth(10);
-	a->setHeight(10);
-	a->setPosition(Vector2D(game->getWindowWidth() / 2, game->getWindowHeight() / 2));
-	a->setVelocity(Vector2D(1, 1));
-	a->setActive(true);
+	createBullet ();
 }
 
 
 Bullets::~Bullets()
 {
 }
+
+void Bullets::createBullet (Vector2D position, Vector2D direction) {
+	Bullet *a = getUnusedObject();
+
+	if (a != nullptr) {
+		a->setWidth (10);
+		a->setHeight (10);
+		a->setPosition (position);
+		a->setVelocity (direction);
+		a->setActive (true);
+	}
+}
+
+
+void Bullets::handleInput (Uint32 time, const SDL_Event & event) {
+	if (event.type == SDL_KEYUP && event.key.keysym.sym == key_) {
+		createBullet ();
+	}
+
+	GameObjectPool::handleInput (time, event);
+}
+
