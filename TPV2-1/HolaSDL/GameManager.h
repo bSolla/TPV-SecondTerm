@@ -12,7 +12,11 @@ class GameManager :
 public:
 	GameManager(SDLGame* game);
 	virtual ~GameManager();
-	// …
+	
+	bool getRunning () const { return running_; }
+	int getCurrentLives () const { return lives_; }
+	int getMaxLives () const { return maxLives_; }
+
 private:
 	// …
 	static int const maxLives_ = 3;
@@ -22,7 +26,7 @@ private:
 	int lives_;
 	int winner_; // 0=none, 1=asteroids, 2=fighter
 	// components of GameManager
-	//GameCtrlIC gameCtrl_;
+	GameCtrlIC gameCtrl_;
 	//ScoreViewerGC scoreView_;
 	//GameStatusViewGC gameStatusView_;
 	//LivesViewer livesViewer_;

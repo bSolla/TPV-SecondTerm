@@ -2,12 +2,13 @@
 
 #include <vector>
 
-#include "DemoContainer.h"
+//#include "DemoContainer.h"
 #include "Fighter.h"
 #include "Asteroids.h"
 #include "Bullets.h"
 #include "SDLGame.h"
 #include "GameObject.h"
+#include "GameManager.h"
 
 class AsteroidsGame: public SDLGame {
 
@@ -31,8 +32,9 @@ private:
 	bool exit_;
 	std::vector<GameObject*> actors_;
 
-	DemoContainer demoContainer_;
+	//DemoContainer demoContainer_;
 	Fighter fighter_;
 	Asteroids asteroids_;
 	Bullets bullets_;
+	GameManager gameManager_;
 };
