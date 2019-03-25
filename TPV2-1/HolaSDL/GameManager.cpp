@@ -3,7 +3,9 @@
 
 
 GameManager::GameManager (SDLGame* game) :
-		gameCtrl_(this){
+		gameCtrl_(this), 
+		fighterAsteroidCollision_(this),
+		bulletsAsteroidsCollision_(this){
 	game_ = game;
 	running_ = false;
 	gameOver_ = true;
@@ -12,6 +14,8 @@ GameManager::GameManager (SDLGame* game) :
 	winner_ = 0;
 
 	addC (&gameCtrl_);
+	addC (&fighterAsteroidCollision_);
+	addC (&bulletsAsteroidsCollision_);
 
 	setId (msg::ObjectId::None);
 	game_->addObserver (this);

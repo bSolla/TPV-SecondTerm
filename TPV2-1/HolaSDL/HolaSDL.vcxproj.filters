@@ -199,7 +199,7 @@
       <Filter>Archivos de encabezado\Components\Physics</Filter>
     </ClInclude>
     <ClInclude Include="BulletsAsteroidsCollision.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de encabezado\Components\Physics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -348,7 +348,7 @@
       <Filter>Archivos de código fuente\Components\Physics</Filter>
     </ClCompile>
     <ClCompile Include="BulletsAsteroidsCollision.cpp">
-      <Filter>Archivos de código fuente</Filter>
+      <Filter>Archivos de código fuente\Components\Physics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

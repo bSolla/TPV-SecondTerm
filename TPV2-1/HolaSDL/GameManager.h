@@ -30,7 +30,7 @@ private:
 	//ScoreViewerGC scoreView_;
 	//GameStatusViewGC gameStatusView_;
 	//LivesViewer livesViewer_;
-	//FighterAsteroidCollision fighterAsteroidCollision_;
-	//BulletsAsteroidsCollision bulletsAsteroidsCollision_;
+	FighterAsteroidCollision fighterAsteroidCollision_;
+	BulletsAsteroidsCollision bulletsAsteroidsCollision_;
 };
 
