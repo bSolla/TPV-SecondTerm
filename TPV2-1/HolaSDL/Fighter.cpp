@@ -40,5 +40,26 @@ void Fighter::reset()
 	Vector2D v(dx * r->nextInt(2, 7), // 2 to 6
 		dy * r->nextInt(2, 7)  // 2 to 6
 	);
-	setVelocity(v.normalize() * 2);
+	setVelocity(Vector2D(0.0, 0.0));
+}
+
+void Fighter::receive(const void * senderObj, const msg::Message & msg)
+{
+	Container::receive(senderObj, msg);
+
+	switch (msg.type_)
+	{
+		case msg::GAME_START:
+			globalSend(this, msg::FighterInfo(msg::Fighter, msg::Broadcast, this));
+			break;
+		case msg::ROUND_START:
+			reset();
+			setActive(true);
+			break;
+		case msg::ROUND_OVER:
+			setActive(false);
+			break;
+		default:
+			break;
+	}
 }

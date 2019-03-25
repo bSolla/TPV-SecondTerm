@@ -4,7 +4,7 @@
 #include "NaturalMovePC.h"
 #include "RotationIC.h"
 #include "ThrustIC.h"
-#include"ReduceSpeedPC.h"
+#include "ReduceSpeedPC.h"
 #include "ShowUpAtOppositeSidePC.h"
 #include "GunIC.h"
 
@@ -15,7 +15,7 @@ public:
 	Fighter(SDLGame* game);
 	virtual ~Fighter();
 	void reset();
-	virtual void receive (const void* senderObj, const msg::Message& msg) { Container::receive (senderObj, msg); }
+	virtual void receive(const void* senderObj, const msg::Message& msg);
 
 private:
 	//…

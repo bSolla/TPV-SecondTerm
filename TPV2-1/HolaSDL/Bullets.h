@@ -10,8 +10,9 @@ public:
 	Bullets(SDLGame* game);
 	virtual ~Bullets();
 	
-	void createBullet (Vector2D position = Vector2D (400.0, 300.0), Vector2D direction = Vector2D (0.0, -1.0));
+	void createBullet (Vector2D position = Vector2D (400.0, 300.0), Vector2D direction = Vector2D (0.0, -1.0), double rotation = 0.0);
 	virtual void handleInput(Uint32 time, const SDL_Event& event);
+	virtual void receive(const void* senderObj, const msg::Message& msg);
 private:
 	// …
 	// components for Bullet

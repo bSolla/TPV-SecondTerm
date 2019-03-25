@@ -12,6 +12,9 @@ class Asteroids : public GameObjectPool<Asteroid, 50> {
 public:
 	Asteroids(SDLGame* game);
 	virtual ~Asteroids();
+	virtual void receive(const void* senderObj, const msg::Message& msg);
+	void create(int size, int x, int y, int speedModule, int gen);
+	int countActiveAsteroids();
 	// ...
 private:
 	// …
