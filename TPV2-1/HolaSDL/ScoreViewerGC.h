@@ -1,12 +1,17 @@
 #pragma once
 #include "GraphicsComponent.h"
 
-//TODO: mirar el código de proyecto y hacer algo parecido a cómo se hizo el marcador de dinero
+class GameManager;
 
 class ScoreViewerGC :
 	public GraphicsComponent {
 public:
-	ScoreViewerGC ();
+	ScoreViewerGC (GameManager *gameManager);
 	virtual ~ScoreViewerGC ();
+
+	virtual void render (Container* c, Uint32 time);
+
+private:
+	GameManager* gm;
 };
 

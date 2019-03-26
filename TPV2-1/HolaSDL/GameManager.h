@@ -14,8 +14,11 @@ public:
 	virtual ~GameManager();
 	
 	bool getRunning () const { return running_; }
+	bool getGameOver () const { return gameOver_; }
 	int getCurrentLives () const { return lives_; }
 	int getMaxLives () const { return maxLives_; }
+	int getScore () const { return score_; }
+	string getWinner () const;
 
 private:
 	// …
@@ -25,11 +28,11 @@ private:
 	int score_;
 	int lives_;
 	int winner_; // 0=none, 1=asteroids, 2=fighter
-	// components of GameManager
+	
 	GameCtrlIC gameCtrl_;
-	//ScoreViewerGC scoreView_;
-	//GameStatusViewGC gameStatusView_;
-	//LivesViewer livesViewer_;
+	ScoreViewerGC scoreView_;
+	GameStatusViewGC gameStatusView_;
+	LivesViewer livesViewer_;
 	FighterAsteroidCollision fighterAsteroidCollision_;
 	BulletsAsteroidsCollision bulletsAsteroidsCollision_;
 };

@@ -81,7 +81,7 @@ void AsteroidsGame::update(Uint32 time) {
 }
 
 void AsteroidsGame::render(Uint32 time) {
-	SDL_SetRenderDrawColor(getRenderer(), COLOR(0x00AAAAFF));
+	SDL_SetRenderDrawColor(getRenderer(), COLOR(0x00003377));
 	SDL_RenderClear(getRenderer());
 
 	for (GameObject* o : actors_) {

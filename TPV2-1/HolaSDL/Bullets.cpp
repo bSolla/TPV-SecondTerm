@@ -14,8 +14,6 @@ Bullets::Bullets(SDLGame* game):
 
 	setId(msg::BulletsShooter);
 	game_->addObserver(this);
-
-	createBullet ();
 }
 
 

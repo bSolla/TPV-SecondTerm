@@ -1,11 +1,18 @@
 #pragma once
 #include "GraphicsComponent.h"
+#include <string>
 
-//TODO: igual que la puntuación --- empezar con un número y si da tiempo hacer que sea una barra de vida
+class GameManager;
+
 class LivesViewer :
 	public GraphicsComponent {
 public:
-	LivesViewer ();
+	LivesViewer (GameManager *gameManager);
 	virtual ~LivesViewer ();
+
+	virtual void render (Container* c, Uint32 time);
+
+private:
+	GameManager* gm;
 };
 
