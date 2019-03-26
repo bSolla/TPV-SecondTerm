@@ -94,13 +94,11 @@ void Container::removeOC(Component* oc) {
 
 
 void Container::receive(const void* senderObj, const msg::Message& msg) {
-	cout << "got to container::receive\n";
 	broadcastToLocalComponents(senderObj, msg);
 }
 
 
 void Container::broadcastToLocalComponents(const void* senderObj, const msg::Message& msg) {
-	cout << "got to Container::broadcastToLocalComponents\n";
 	for (auto ic : ic_) {
 		if (ic.data != senderObj && ic.active)
 			ic.data->receive(this, msg);
@@ -129,7 +127,6 @@ void Container::localSend(const void* senderObj, const msg::Message& msg) {
 }
 
 void Container::globalSend(const void* senderObj, const msg::Message& msg) {
-	cout << "got to Container::globalsend\n";
 	getGame()->send(senderObj, msg);
 }
 

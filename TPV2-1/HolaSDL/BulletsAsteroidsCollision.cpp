@@ -27,3 +27,20 @@ void BulletsAsteroidsCollision::update (Container * c, Uint32 time) {
 		}
 	}
 }
+
+void BulletsAsteroidsCollision::receive (Container * c, const msg::Message & msg) {
+	switch (msg.type_) {
+	case msg::ASTEROIDS_INFO: {
+		const msg::AsteroidsInfo& m1 = static_cast<const msg::AsteroidsInfo&>(msg);
+		asteroids_ = m1.asteroids_;
+		break;
+	}
+	case msg::BULLETS_INFO: {
+		const msg::BulletsInfoMsg& m2 = static_cast<const msg::BulletsInfoMsg&>(msg);
+		bullets_ = m2.bullets_;
+		break;
+	}
+	default:
+		break;
+	}
+}

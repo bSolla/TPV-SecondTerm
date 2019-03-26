@@ -23,6 +23,3 @@ void GunIC::handleInput(Container * c, Uint32 time, const SDL_Event & event) {
 	}
 }
 
-void GunIC::receive (Container* c, const msg::Message & msg) {
-	cout << "got to GunIC receive\n";
-}

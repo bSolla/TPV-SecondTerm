@@ -23,3 +23,21 @@ void FighterAsteroidCollision::update (Container * c, Uint32 time) {
 		}
 	}
 }
+
+
+void FighterAsteroidCollision::receive (Container * c, const msg::Message & msg) {
+	switch (msg.type_) {
+	case msg::ASTEROIDS_INFO: {
+		const msg::AsteroidsInfo& m1 = static_cast<const msg::AsteroidsInfo&>(msg);
+		asteroids_ = m1.asteroids_;
+		break;
+	}
+	case msg::FIGHTER_INFO: {
+		const msg::FighterInfo& m2 = static_cast<const msg::FighterInfo&>(msg);
+		fighter_ = m2.fighter_;
+		break;
+	}
+	default:
+		break;
+	}
+}

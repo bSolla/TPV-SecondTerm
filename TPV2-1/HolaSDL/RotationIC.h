@@ -11,10 +11,5 @@ public:
 	virtual ~RotationIC();
 
 	void handleInput(Container* c, Uint32 time, const SDL_Event& event);
-
-	// TODO: clean after debugging
-	virtual void receive (Container* c, const msg::Message& msg) {
-		cout << "got to RotationIC::receive\n";
-	}
 };
 

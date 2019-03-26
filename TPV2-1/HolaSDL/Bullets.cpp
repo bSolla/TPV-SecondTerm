@@ -14,6 +14,8 @@ Bullets::Bullets(SDLGame* game):
 
 	setId(msg::BulletsShooter);
 	game_->addObserver(this);
+
+	setActive (false);
 }
 
 
@@ -34,14 +36,14 @@ void Bullets::createBullet (Vector2D position, Vector2D direction, double rotati
 	}
 }
 
-
-void Bullets::handleInput (Uint32 time, const SDL_Event & event) {
-	if (event.type == SDL_KEYUP && event.key.keysym.sym == key_) {
-		createBullet ();
-	}
-
-	GameObjectPool::handleInput (time, event);
-}
+// ---------------- for debug purposes------------------------------------
+//void Bullets::handleInput (Uint32 time, const SDL_Event & event) {
+//	if (event.type == SDL_KEYUP && event.key.keysym.sym == key_) {
+//		createBullet ();
+//	}
+//
+//	GameObjectPool::handleInput (time, event);
+//}
 
 void Bullets::receive(const void * senderObj, const msg::Message & msg)
 {
@@ -59,17 +61,15 @@ void Bullets::receive(const void * senderObj, const msg::Message & msg)
 		deactiveAllObjects();
 		setActive(false);
 		break;
-	case msg::BULLET_ASTEROID_COLLISION:
-	{
+	case msg::BULLET_ASTEROID_COLLISION: {
 		const msg::BulletAsteroidCollision& m = static_cast<const msg::BulletAsteroidCollision&>(msg);
 		m.bullet_->setActive(false);
 		break;
 	}
-	case msg::FIGHTER_SHOOT:
-	{
+	case msg::FIGHTER_SHOOT: {
 		const msg::Shoot& m1 = static_cast<const msg::Shoot&>(msg);
 		createBullet(m1.pos_ - Vector2D(1 / 2, 5), m1.dir_ * 5, Vector2D(0, -1).angle(m1.dir_));
-		// TODO: play shoot sound
+		game_->getServiceLocator ()->getAudios ()->playChannel (Resources::GunShot, 0);
 		break;
 	}
 	default:

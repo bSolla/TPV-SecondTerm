@@ -20,6 +20,8 @@ public:
 	int getScore () const { return score_; }
 	string getWinner () const;
 
+	virtual void receive(const void* senderObj, const msg::Message& msg);
+
 private:
 	// …
 	static int const maxLives_ = 3;

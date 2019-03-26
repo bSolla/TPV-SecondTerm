@@ -11,7 +11,7 @@ public:
 	virtual ~Bullets();
 	
 	void createBullet (Vector2D position = Vector2D (400.0, 300.0), Vector2D direction = Vector2D (0.0, -1.0), double rotation = 0.0);
-	virtual void handleInput(Uint32 time, const SDL_Event& event);
+	//virtual void handleInput(Uint32 time, const SDL_Event& event); // ------ for debugging
 	virtual void receive(const void* senderObj, const msg::Message& msg);
 private:
 	// …
@@ -20,6 +20,6 @@ private:
 	DeactivateOnBorderExit deactivate_;
 	ImageGC bulletImage_;
 
-	SDL_Keycode key_ = SDLK_b;
+	SDL_Keycode key_ = SDLK_b; // key used to debug
 };
 

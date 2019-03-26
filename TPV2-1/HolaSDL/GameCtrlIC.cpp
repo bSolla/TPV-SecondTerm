@@ -18,7 +18,6 @@ void GameCtrlIC::handleInput (Container * c, Uint32 time, const SDL_Event & even
 			if (gm->getCurrentLives () == gm->getMaxLives ()) {
 				//c->globalSend (this, msg::Message (msg::GAME_START, msg::ObjectId::Broadcast, msg::ObjectId::Broadcast));
 				c->getGame ()->send (this, msg::Message (msg::GAME_START, msg::ObjectId::Broadcast, msg::ObjectId::Broadcast));
-				cout << "debug game control ic msgs\n";
 			}
 
 			// always send round start

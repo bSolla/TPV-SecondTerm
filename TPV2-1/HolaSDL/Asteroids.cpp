@@ -32,6 +32,7 @@ void Asteroids::receive(const void * senderObj, const msg::Message & msg) {
 		globalSend(this, msg::AsteroidsInfo(msg::Asteroids, msg::Broadcast, &getAllObjects()));
 		break;
 	case msg::ROUND_START: 
+		setActive (true);
 		newRoundCreation ();
 		break;
 	case msg::ROUND_OVER:
@@ -131,5 +132,5 @@ void Asteroids::bulletCollision (const msg::Message & msg) {
 	if (countActiveAsteroids() == 0) {
 		globalSend(this, msg::Message(msg::NO_MORE_ASTEROIDS, msg::Asteroids, msg::Broadcast));
 	}
-	// TODO: play explosion sound
+	game_->getServiceLocator ()->getAudios ()->playChannel (Resources::Explosion, 0);
 }

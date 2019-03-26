@@ -23,7 +23,7 @@ GameManager::GameManager (SDLGame* game) :
 	addC (&scoreView_);
 	addC (&gameStatusView_);
 
-	setId (msg::ObjectId::None);
+	setId (msg::ObjectId::GameManager);
 	game_->addObserver (this);
 }
 
@@ -46,4 +46,50 @@ string GameManager::getWinner () const {
 	}
 
 	return winner;
+}
+
+void GameManager::receive (const void * senderObj, const msg::Message & msg) {
+	Container::receive(senderObj, msg);
+
+	switch (msg.type_) {
+	case msg::GAME_START:
+		gameOver_ = false;
+		winner_ = 0;
+		lives_ = maxLives_;
+		break;
+	case msg::ROUND_START:
+		running_ = true;
+		game_->getServiceLocator ()->getAudios ()->playMusic (Resources::ImperialMarch);
+		break;
+	case msg::ASTEROID_DESTROYED: {
+		const msg::AsteroidDestroyed& m1 = static_cast<const msg::AsteroidDestroyed&>(msg);
+		score_ += m1.points_;
+		break;
+	}
+	case msg::NO_MORE_ASTEROIDS: 
+		running_ = false;
+		gameOver_ = true;
+		winner_ = 1;
+		game_->getServiceLocator ()->getAudios ()->haltMusic ();
+		//globalSend (this, msg::Message (msg::ROUND_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+		//globalSend (this, msg::Message (msg::GAME_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+		game_->send (this, msg::Message (msg::ROUND_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+		game_->send (this, msg::Message (msg::GAME_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+		break;
+	case msg::FIGHTER_ASTEROID_COLLISION: 
+		game_->getServiceLocator ()->getAudios ()->playChannel (Resources::Explosion, 0);
+		game_->getServiceLocator ()->getAudios ()->haltMusic ();
+		running_ = false;
+		lives_--;
+		//globalSend (this, msg::Message (msg::ROUND_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+		game_->send (this, msg::Message (msg::ROUND_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+		if (lives_ == 0) {
+			gameOver_ = true;
+			winner_ = 2;
+			//globalSend (this, msg::Message (msg::GAME_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+			game_->send (this, msg::Message (msg::GAME_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+		}
+	default:
+		break;
+	}
 }
