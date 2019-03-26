@@ -20,8 +20,7 @@ void BulletsAsteroidsCollision::update (Container * c, Uint32 time) {
 				if (!gm->getRunning ())
 					return;
 				else if ((*itBullets)->isActive () && (*itAsteroids)->isActive () && Collisions::collidesWithRotation ((*itBullets), (*itAsteroids))) {
-					//c->globalSend (this, msg::BulletAsteroidCollision (msg::ObjectId::None, msg::ObjectId::Broadcast, (*itBullets), (*itAsteroids)));
-					c->getGame ()->send (this, msg::BulletAsteroidCollision (msg::ObjectId::None, msg::ObjectId::Broadcast, (*itBullets), (*itAsteroids)));
+					c->globalSend (this, msg::BulletAsteroidCollision (msg::ObjectId::None, msg::ObjectId::Broadcast, (*itBullets), (*itAsteroids)));
 				}
 			}
 		}

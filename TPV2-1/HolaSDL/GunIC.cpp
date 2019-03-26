@@ -17,9 +17,7 @@ void GunIC::handleInput(Container * c, Uint32 time, const SDL_Event & event) {
 		Vector2D d = Vector2D(0, -1).rotate(c->getRotation());
  		int type = 0; // bullet type
 
-		// TODO: change this to the second line if it doesnt work
 		c->globalSend (this, msg::Shoot ( msg::ObjectId::FighterGun, msg::ObjectId::Broadcast, p, d, type ));
-		//c->getGame ()->send (this, msg::Shoot ( msg::ObjectId::FighterGun, msg::ObjectId::Broadcast, p, d, type ));
 	}
 }
 

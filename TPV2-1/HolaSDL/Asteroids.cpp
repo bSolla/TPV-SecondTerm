@@ -122,8 +122,7 @@ void Asteroids::bulletCollision (const msg::Message & msg) {
 
 	int currentGen = m.asteroid_->getGenerations ();
 
-	//globalSend(this, msg::AsteroidDestroyed(msg::Asteroids, msg::Broadcast, (4 - m.asteroid_->getGenerations())));
-	game_->send (this, msg::AsteroidDestroyed (msg::Asteroids, msg::Broadcast, (4 - m.asteroid_->getGenerations ())));
+	globalSend(this, msg::AsteroidDestroyed(msg::Asteroids, msg::Broadcast, (4 - m.asteroid_->getGenerations())));
 	
 	if ( currentGen > 1) {
 		create (generationalSize[currentGen - 1], m.asteroid_->getPosition(), currentGen - 1);

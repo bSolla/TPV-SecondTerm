@@ -17,8 +17,7 @@ void FighterAsteroidCollision::update (Container * c, Uint32 time) {
 			if (!gm->getRunning ())
 				return;
 			else if (fighter_->isActive() && (*it)->isActive () && Collisions::collidesWithRotation(fighter_, (*it))){
-				//c->globalSend (this, msg::FighterAsteroidCollisionMsg (msg::ObjectId::None, msg::ObjectId::Broadcast, fighter_, (*it)));
-				c->getGame ()->send (this, msg::FighterAsteroidCollisionMsg (msg::ObjectId::None, msg::ObjectId::Broadcast, fighter_, (*it)));
+				c->globalSend (this, msg::FighterAsteroidCollisionMsg (msg::ObjectId::None, msg::ObjectId::Broadcast, fighter_, (*it)));
 			}
 		}
 	}

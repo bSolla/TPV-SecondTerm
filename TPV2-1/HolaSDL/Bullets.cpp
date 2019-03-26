@@ -36,15 +36,6 @@ void Bullets::createBullet (Vector2D position, Vector2D direction, double rotati
 	}
 }
 
-// ---------------- for debug purposes------------------------------------
-//void Bullets::handleInput (Uint32 time, const SDL_Event & event) {
-//	if (event.type == SDL_KEYUP && event.key.keysym.sym == key_) {
-//		createBullet ();
-//	}
-//
-//	GameObjectPool::handleInput (time, event);
-//}
-
 void Bullets::receive(const void * senderObj, const msg::Message & msg)
 {
 	Container::receive(senderObj, msg);
