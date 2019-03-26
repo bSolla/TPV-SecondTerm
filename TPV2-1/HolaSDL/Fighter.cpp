@@ -9,7 +9,6 @@ Fighter::Fighter(SDLGame* game):
 		thrust_(THRUST_KEY, THRUST_VALUE, SPEED_LIMIT),
 		rotation_(ROTATE_CLOCKWISE, ROTATE_COUNTERCLOCKWISE, ALPHA) {
 	addC(&fighterImage_); 
-	//game_->addObserver (&fighterImage_);
 	addC(&naturalMove_);
 	addC(&oppositeSide_);
 	addC(&rotation_);
@@ -20,6 +19,8 @@ Fighter::Fighter(SDLGame* game):
 	reset();
 	setId (msg::Fighter);
 	game_->addObserver (this);
+
+	setActive (false);
 }
 
 

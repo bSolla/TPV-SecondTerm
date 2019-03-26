@@ -18,7 +18,6 @@ public:
 	virtual void receive(const void* senderObj, const msg::Message& msg);
 
 private:
-	//…
 	// components
 	ImageGC fighterImage_;
 	NaturalMovePC naturalMove_;

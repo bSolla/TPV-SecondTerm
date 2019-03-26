@@ -13,14 +13,18 @@ public:
 	Asteroids(SDLGame* game);
 	virtual ~Asteroids();
 	virtual void receive(const void* senderObj, const msg::Message& msg);
-	void create(int size, int x, int y, int speedModule, int gen);
+	
 	int countActiveAsteroids();
 	// ...
 private:
-	// …
+	int generationalSize[4] = { 0, 10, 15, 20 };
 	// component for Asteroid
 	ImageGC asteroidImage_;
 	NaturalMovePC naturalMove_;
 	RotatingPC rotating_;
 	ShowUpAtOppositeSidePC showUpAtOppositeSide_;
+
+	void create(int size, Vector2D pos, int gen);
+	void newRoundCreation ();
+	void bulletCollision (const msg::Message & msg);
 };
