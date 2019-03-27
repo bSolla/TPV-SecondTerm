@@ -85,6 +85,10 @@ void GameManager::receive (const void * senderObj, const msg::Message & msg) {
 			winner_ = 1;
 			globalSend (this, msg::Message (msg::GAME_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
 		}
+	case msg::GAME_OVER:
+		running_ = false;
+		globalSend (this, msg::Message (msg::GAME_START, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+		break;
 	default:
 		break;
 	}
