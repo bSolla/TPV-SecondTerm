@@ -55,6 +55,7 @@ void GameManager::receive (const void * senderObj, const msg::Message & msg) {
 	case msg::GAME_START:
 		gameOver_ = false;
 		winner_ = 0;
+		score_ = 0;
 		lives_ = maxLives_;
 		break;
 	case msg::ROUND_START:
@@ -85,10 +86,6 @@ void GameManager::receive (const void * senderObj, const msg::Message & msg) {
 			winner_ = 1;
 			globalSend (this, msg::Message (msg::GAME_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
 		}
-	case msg::GAME_OVER:
-		running_ = false;
-		globalSend (this, msg::Message (msg::GAME_START, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
-		break;
 	default:
 		break;
 	}
