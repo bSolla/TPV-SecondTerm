@@ -9,6 +9,7 @@
 #include "GameObject.h"
 #include "GameManager.h"
 
+
 class AsteroidsGame: public SDLGame {
 
 public:
