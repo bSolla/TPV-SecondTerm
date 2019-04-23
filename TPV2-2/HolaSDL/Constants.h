@@ -16,3 +16,7 @@ const double ALPHA = 5.0;
 
 // ---------------------------------------- gun
 static SDL_Keycode GUN_KEY = SDLK_SPACE;
+
+// ........................................ black holes
+
+const int BLACK_HOLE_SIZE = 50;

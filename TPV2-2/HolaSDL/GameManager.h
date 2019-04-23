@@ -8,6 +8,10 @@
 #include "FighterAsteroidCollision.h"
 #include "BulletsAsteroidsCollision.h"
 #include "Logger.h"
+#include "AsteroidBlackHoleCollision.h"
+#include "BulletBlackHoleCollision.h"
+#include "FighterBlackHoleCollision.h"
+
 
 class GameManager :
 	public Container {
@@ -39,7 +43,10 @@ private:
 	LivesViewer livesViewer_;
 	FighterAsteroidCollision fighterAsteroidCollision_;
 	BulletsAsteroidsCollision bulletsAsteroidsCollision_;
-
+	AsteroidBlackHoleCollision asteroidsBlackHolesCollision_;
+	BulletBlackHoleCollision bulletsBlackHolesCollision_;
+	FighterBlackHoleCollision fighterBlackHoleCollision_;
+	
 	void logGameOverInfo ();
 };
 

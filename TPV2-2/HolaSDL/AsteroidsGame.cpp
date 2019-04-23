@@ -9,7 +9,8 @@ AsteroidsGame::AsteroidsGame() :
 	fighter_(this),
 	asteroids_(this),
 	bullets_(this),
-	gameManager_(this)
+	gameManager_(this),
+	blackHoles_(this)
 {
 	initGame();
 }
@@ -25,6 +26,7 @@ void AsteroidsGame::initGame() {
 	actors_.push_back(&asteroids_);
 	actors_.push_back(&bullets_);
 	actors_.push_back (&gameManager_);
+	actors_.push_back (&blackHoles_);
 }
 
 void AsteroidsGame::closeGame() {

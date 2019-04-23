@@ -60,6 +60,9 @@ void Fighter::receive(const void * senderObj, const msg::Message & msg)
 		case msg::ROUND_OVER:
 			setActive(false);
 			break;
+		case msg::BULLET_BLACK_HOLE_COLLISION:
+			globalSend(this, msg::FighterInfo(msg::Fighter, msg::Broadcast, this));
+			break;
 		default:
 			break;
 	}
