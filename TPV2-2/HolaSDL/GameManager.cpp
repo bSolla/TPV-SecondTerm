@@ -61,6 +61,7 @@ void GameManager::receive (const void * senderObj, const msg::Message & msg) {
 	case msg::ROUND_START:
 		running_ = true;
 		game_->getServiceLocator ()->getAudios ()->playMusic (Resources::ImperialMarch);
+		Logger::instance ()->log ("Round Start");
 		break;
 	case msg::ASTEROID_DESTROYED: {
 		const msg::AsteroidDestroyed& m1 = static_cast<const msg::AsteroidDestroyed&>(msg);
@@ -71,6 +72,7 @@ void GameManager::receive (const void * senderObj, const msg::Message & msg) {
 		running_ = false;
 		gameOver_ = true;
 		winner_ = 2;
+		logGameOverInfo ();
 		game_->getServiceLocator ()->getAudios ()->haltMusic ();
 		globalSend (this, msg::Message (msg::ROUND_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
 		globalSend (this, msg::Message (msg::GAME_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
@@ -84,9 +86,21 @@ void GameManager::receive (const void * senderObj, const msg::Message & msg) {
 		if (lives_ == 0) {
 			gameOver_ = true;
 			winner_ = 1;
+			logGameOverInfo ();
 			globalSend (this, msg::Message (msg::GAME_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
 		}
+	case msg::ROUND_OVER:
+		Logger::instance ()->log ("Round End");
+		break;
 	default:
 		break;
 	}
+}
+
+void GameManager::logGameOverInfo () {
+	int auxScore = score_;
+	string auxWinner = getWinner ();
+	Logger::instance ()->log ([auxScore, auxWinner]() ->string { stringstream s;
+																 s << "Game Over  --  Final score: " << auxScore << "  --  Winner: " << auxWinner;
+																 return s.str (); });
 }

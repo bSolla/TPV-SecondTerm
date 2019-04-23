@@ -8,7 +8,7 @@
 #include "SDLGame.h"
 #include "GameObject.h"
 #include "GameManager.h"
-
+#include "Logger.h"
 
 class AsteroidsGame: public SDLGame {
 

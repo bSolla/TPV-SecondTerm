@@ -8,14 +8,17 @@ using namespace std;
 
 class Logger
 {
-	static Logger* instance_;
+	static Logger instance_;
+	static bool instantiated_;
+	Logger () {}
 
-	Logger();
+	Logger (Logger&) = delete;
+	Logger& operator=(const Logger&) = delete;
 
 public:
 
-	inline static void initInstance(string filename) { if (instance_ == nullptr) { instance_ = new Logger(); instance_->log_.open(filename); instance_->worker_.start(); } }
-	inline static Logger* instance() { assert(instance_ != nullptr); return instance_; }
+	inline static void initInstance (string filename) { if (!instantiated_) { instance_.log_.open (filename); instance_.worker_.start (); instantiated_ = true; } }
+	inline static Logger* instance() { assert(instantiated_); return &instance_; }
 	void log(string info);
 	void log(function<string()> f);
 	

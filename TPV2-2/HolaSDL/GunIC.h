@@ -1,6 +1,8 @@
 #pragma once
 #include "InputComponent.h"
 #include "Messages_defs.h"
+#include "Logger.h"
+#include <sstream>
 
 class GunIC : public InputComponent {
 private:

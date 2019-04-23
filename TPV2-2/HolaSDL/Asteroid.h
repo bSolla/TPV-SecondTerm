@@ -1,5 +1,8 @@
 #pragma once
+#include <sstream>
+#include "Logger.h"
 #include "Container.h"
+
 class Asteroid :
 	public Container
 {

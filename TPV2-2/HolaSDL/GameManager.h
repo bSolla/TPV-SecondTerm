@@ -1,4 +1,5 @@
 #pragma once
+#include <sstream>
 #include "Container.h"
 #include "GameCtrlIC.h"
 #include "ScoreViewerGC.h"
@@ -6,6 +7,7 @@
 #include "LivesViewer.h"
 #include "FighterAsteroidCollision.h"
 #include "BulletsAsteroidsCollision.h"
+#include "Logger.h"
 
 class GameManager :
 	public Container {
@@ -37,5 +39,7 @@ private:
 	LivesViewer livesViewer_;
 	FighterAsteroidCollision fighterAsteroidCollision_;
 	BulletsAsteroidsCollision bulletsAsteroidsCollision_;
+
+	void logGameOverInfo ();
 };
 

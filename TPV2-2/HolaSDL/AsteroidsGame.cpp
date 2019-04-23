@@ -19,6 +19,8 @@ AsteroidsGame::~AsteroidsGame() {
 }
 
 void AsteroidsGame::initGame() {
+	Logger::initInstance ("log.txt");
+
 	actors_.push_back(&fighter_);
 	actors_.push_back(&asteroids_);
 	actors_.push_back(&bullets_);

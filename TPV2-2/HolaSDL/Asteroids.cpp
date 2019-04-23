@@ -70,6 +70,11 @@ void Asteroids::create(int size, Vector2D pos, int gen)
 
 	a->setGenerations(gen);
 	a->setActive(true);
+
+	Logger::instance ()->log ([pos, v, gen]()->string { stringstream s;
+														s << "New asteroid: " << pos << " " << v;
+														s << "  --  Generation: " << gen;
+														return s.str (); });
 }
 
 
