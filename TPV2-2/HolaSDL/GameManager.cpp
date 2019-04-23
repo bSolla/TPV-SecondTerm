@@ -8,6 +8,9 @@ GameManager::GameManager (SDLGame* game) :
 		bulletsAsteroidsCollision_(this), 
 		livesViewer_(this),
 		scoreView_(this),
+		asteroidsBlackHolesCollision_(this),
+		bulletsBlackHolesCollision_(this),
+		fighterBlackHoleCollision_(this),
 		gameStatusView_(this) {
 	game_ = game;
 	running_ = false;
@@ -22,6 +25,9 @@ GameManager::GameManager (SDLGame* game) :
 	addC (&livesViewer_);
 	addC (&scoreView_);
 	addC (&gameStatusView_);
+	addC(&asteroidsBlackHolesCollision_);
+	addC(&bulletsBlackHolesCollision_);
+	addC(&fighterBlackHoleCollision_);
 
 	setId (msg::ObjectId::GameManager);
 	game_->addObserver (this);
@@ -86,6 +92,17 @@ void GameManager::receive (const void * senderObj, const msg::Message & msg) {
 			winner_ = 1;
 			globalSend (this, msg::Message (msg::GAME_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
 		}
+		break;
+	case msg::FIGHTER_BLACK_HOLE_COLLISION:
+		running_ = false;
+		lives_--;
+		globalSend(this, msg::Message(msg::ROUND_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+		if (lives_ == 0) {
+			gameOver_ = true;
+			winner_ = 1;
+			globalSend(this, msg::Message(msg::GAME_OVER, msg::ObjectId::GameManager, msg::ObjectId::Broadcast));
+		}
+		break;
 	default:
 		break;
 	}

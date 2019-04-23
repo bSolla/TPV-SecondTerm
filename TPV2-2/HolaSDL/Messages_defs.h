@@ -9,6 +9,7 @@
 
 class Asteroid;
 class Bullet;
+class BlackHole;
 
 namespace msg {
 
@@ -78,6 +79,40 @@ struct AsteroidsInfo: public msg::Message {
 	Message(msg::ASTEROIDS_INFO, sender, destination), asteroids_(asteroids)  {
 	}
 	const std::vector<Asteroid*>*  asteroids_;
+};
+
+struct AsteroidBlackHoleCollision : public msg::Message {
+	AsteroidBlackHoleCollision(msg::ObjectId sender, msg::ObjectId destination, BlackHole* blackHole, Asteroid* asteroid) :
+	Message(msg::ASTEROID_BLACK_HOLE_COLLISION, sender, destination), blackHole_(blackHole), asteroid_(asteroid)  {
+	}
+
+	BlackHole* blackHole_;
+	Asteroid* asteroid_;
+};
+
+struct BulletBlackHoleCollision : public msg::Message {
+	BulletBlackHoleCollision(msg::ObjectId sender, msg::ObjectId destination, BlackHole* blackHole, Bullet* bullet) :
+		Message(msg::BULLET_BLACK_HOLE_COLLISION, sender, destination), blackHole_(blackHole), bullet_(bullet) {
+	}
+
+	BlackHole* blackHole_;
+	Bullet* bullet_;
+};
+
+struct FighterBlackHoleCollision : public msg::Message {
+	FighterBlackHoleCollision(msg::ObjectId sender, msg::ObjectId destination, BlackHole* blackHole, GameObject* fighter) :
+		Message(msg::FIGHTER_BLACK_HOLE_COLLISION, sender, destination), blackHole_(blackHole), fighter_(fighter) {
+	}
+
+	BlackHole* blackHole_;
+	GameObject* fighter_;
+};
+
+struct BlackHolesInfo : public msg::Message {
+	BlackHolesInfo(msg::ObjectId sender, msg::ObjectId destination, const std::vector<BlackHole*>* blackHoles) :
+		Message(msg::BLACK_HOLES_INFO, sender, destination), blackHoles_(blackHoles) {
+	}
+	const std::vector<BlackHole*>*  blackHoles_;
 };
 
 };

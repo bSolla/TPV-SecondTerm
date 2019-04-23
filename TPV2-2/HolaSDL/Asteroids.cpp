@@ -42,6 +42,14 @@ void Asteroids::receive(const void * senderObj, const msg::Message & msg) {
 	case msg::BULLET_ASTEROID_COLLISION:
 		bulletCollision (msg);
 		break;
+	case msg::FIGHTER_INFO: {
+		const msg::FighterInfo& m2 = static_cast<const msg::FighterInfo&>(msg);
+		fighterPos_ = m2.fighter_->getPosition();
+		break;
+	}
+	case msg::ASTEROID_BLACK_HOLE_COLLISION:
+		blackHoleCollision(msg);
+		break;
 	default:
 		break;
 	}
@@ -132,4 +140,38 @@ void Asteroids::bulletCollision (const msg::Message & msg) {
 		globalSend(this, msg::Message(msg::NO_MORE_ASTEROIDS, msg::Asteroids, msg::Broadcast));
 	}
 	game_->getServiceLocator ()->getAudios ()->playChannel (Resources::Explosion, 0);
+}
+
+void Asteroids::blackHoleCollision(const msg::Message & msg)
+{
+	// msg casting
+	const msg::AsteroidBlackHoleCollision& m = static_cast<const msg::AsteroidBlackHoleCollision&>(msg);
+	int x, y;
+
+	int rand = (game_->getServiceLocator()->getRandomGenerator()->nextInt(1, 5));
+
+	switch (rand) {
+	case 1:
+		x = game_->getServiceLocator()->getRandomGenerator()->nextInt(10, fighterPos_.getX() - 100);
+		y = game_->getServiceLocator()->getRandomGenerator()->nextInt(10, fighterPos_.getY() - 100);
+		break;
+	case 2:
+		x = game_->getServiceLocator()->getRandomGenerator()->nextInt(fighterPos_.getX() + 100, game_->getWindowWidth() - 10);
+		y = game_->getServiceLocator()->getRandomGenerator()->nextInt(10, fighterPos_.getY() - 100);
+		break;
+	case 3:
+		x = game_->getServiceLocator()->getRandomGenerator()->nextInt(10, fighterPos_.getX() - 100);
+		y = game_->getServiceLocator()->getRandomGenerator()->nextInt(fighterPos_.getY() + 100, game_->getWindowHeight() - 10);
+		break;
+	case 4:
+		x = game_->getServiceLocator()->getRandomGenerator()->nextInt(fighterPos_.getX() + 100, game_->getWindowWidth() - 10);
+		y = game_->getServiceLocator()->getRandomGenerator()->nextInt(fighterPos_.getY() + 100, game_->getWindowHeight() - 10);
+		break;
+	default:
+		break;
+	}
+
+	Vector2D pos = Vector2D(x, y);
+
+	m.asteroid_->setPosition(pos);
 }

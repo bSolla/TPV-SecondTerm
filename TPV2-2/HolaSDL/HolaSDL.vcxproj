@@ -12,13 +12,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Asteroid.h" />
+    <ClInclude Include="AsteroidBlackHoleCollision.h" />
     <ClInclude Include="Asteroids.h" />
     <ClInclude Include="AsteroidsGame.h" />
     <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="BlackHole.h" />
+    <ClInclude Include="BlackHoles.h" />
     <ClInclude Include="BlockingQueue.h" />
     <ClInclude Include="BounceOnBorderPC.h" />
     <ClInclude Include="BoundingBoxGC.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="BulletBlackHoleCollision.h" />
     <ClInclude Include="Bullets.h" />
     <ClInclude Include="BulletsAsteroidsCollision.h" />
     <ClInclude Include="Collisions.h" />
@@ -28,6 +32,7 @@
     <ClInclude Include="DeactivateOnBorderExit.h" />
     <ClInclude Include="Fighter.h" />
     <ClInclude Include="FighterAsteroidCollision.h" />
+    <ClInclude Include="FighterBlackHoleCollision.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="FontsManager.h" />
     <ClInclude Include="GameCtrlIC.h" />
@@ -70,13 +75,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Asteroid.cpp" />
+    <ClCompile Include="AsteroidBlackHoleCollision.cpp" />
     <ClCompile Include="Asteroids.cpp" />
     <ClCompile Include="AsteroidsGame.cpp" />
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="BlackHole.cpp" />
+    <ClCompile Include="BlackHoles.cpp" />
     <ClCompile Include="BlockingQueue.cpp" />
     <ClCompile Include="BounceOnBorderPC.cpp" />
     <ClCompile Include="BoundingBoxGC.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="BulletBlackHoleCollision.cpp" />
     <ClCompile Include="Bullets.cpp" />
     <ClCompile Include="BulletsAsteroidsCollision.cpp" />
     <ClCompile Include="Collisions.cpp" />
@@ -85,6 +94,7 @@
     <ClCompile Include="DeactivateOnBorderExit.cpp" />
     <ClCompile Include="Fighter.cpp" />
     <ClCompile Include="FighterAsteroidCollision.cpp" />
+    <ClCompile Include="FighterBlackHoleCollision.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="FontsManager.cpp" />
     <ClCompile Include="GameCtrlIC.cpp" />

@@ -63,6 +63,11 @@ void Bullets::receive(const void * senderObj, const msg::Message & msg)
 		game_->getServiceLocator ()->getAudios ()->playChannel (Resources::GunShot, 0);
 		break;
 	}
+	case msg::BULLET_BLACK_HOLE_COLLISION: {
+		const msg::BulletBlackHoleCollision& m2 = static_cast<const msg::BulletBlackHoleCollision&>(msg);
+		m2.bullet_->setActive(false);
+		break;
+	}
 	default:
 		break;
 	}

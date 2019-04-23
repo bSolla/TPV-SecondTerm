@@ -27,4 +27,7 @@ private:
 	void create(int size, Vector2D pos, int gen);
 	void newRoundCreation ();
 	void bulletCollision (const msg::Message & msg);
+	void blackHoleCollision(const msg::Message & msg);
+
+	Vector2D fighterPos_ = Vector2D(getGame()->getWindowWidth() / 2 - 6, getGame()->getWindowHeight() / 2 - 6);
 };
