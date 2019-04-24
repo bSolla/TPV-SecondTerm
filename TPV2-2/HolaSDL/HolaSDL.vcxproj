@@ -54,7 +54,6 @@
     <ClInclude Include="PhysicsComponent.h" />
     <ClInclude Include="RandomNumberGenerator.h" />
     <ClInclude Include="ReduceSpeedPC.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="RotatingPC.h" />
     <ClInclude Include="RotationIC.h" />

@@ -34,12 +34,17 @@ void BlackHoles::receive(const void * senderObj, const msg::Message & msg)
 		break;
 	case msg::ROUND_START:
 		setActive(true);
-		newRoundCreation();
+		if (roundLost) {
+			newRoundCreation ();
+			roundLost = false;
+		}
 		break;
-	case msg::ROUND_OVER:
+	case msg::FIGHTER_ASTEROID_COLLISION:
+	case msg::FIGHTER_BLACK_HOLE_COLLISION:
 		deactiveAllObjects();
 		setActive(false);
 		num_ *= 2;
+		roundLost = true;
 		break;
 	default:
 		break;

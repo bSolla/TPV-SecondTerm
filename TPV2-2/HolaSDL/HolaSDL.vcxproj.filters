@@ -1,412 +1,402 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de código fuente">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Archivos de código fuente\Components">
-      <UniqueIdentifier>{4eaf66ad-f55e-411f-8711-20d4e6f2044d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\Components\Physics">
-      <UniqueIdentifier>{3ab6c34e-73d7-4fe2-8ff5-b2497922e98d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\Components\Graphic">
-      <UniqueIdentifier>{9f64ebb9-40a8-49fb-9649-22a481e43752}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\Components\Input">
-      <UniqueIdentifier>{e9c18da0-1172-4f2b-a094-a04839904bef}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de código fuente\Game Objects">
-      <UniqueIdentifier>{8e353e98-7520-4f1a-b0f9-6e4b5958dead}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\Game Objects">
-      <UniqueIdentifier>{bbf37001-53fe-4129-8335-c252d6967719}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\Components">
-      <UniqueIdentifier>{67467f32-37c3-4aa1-a379-221992902fe5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\Components\Physics">
-      <UniqueIdentifier>{3e9ec495-6f1e-44b9-b7fc-b52c1f461e69}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\Components\Graphic">
-      <UniqueIdentifier>{af2ca8df-b1ff-4079-8f7c-1ea46d770a1f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\Components\Input">
-      <UniqueIdentifier>{b26ac101-0be9-434f-a2dc-9785a8ca7b3e}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AsteroidsGame.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="AudioManager.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Collisions.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Container.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Font.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="FontsManager.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObjectPool.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Messages_decl.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Messages_defs.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Observer.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="RandomNumberGenerator.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Resources.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="sdl_includes.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="SDLAudioManager.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="SDLFontsManager.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="SDLGame.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="SDLTexturesManager.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ServiceLocator.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="SRandBasedGenerator.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="TexturesManager.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2D.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Constants.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="GameManager.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Asteroid.h">
-      <Filter>Archivos de encabezado\Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Asteroids.h">
-      <Filter>Archivos de encabezado\Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Bullet.h">
-      <Filter>Archivos de encabezado\Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Bullets.h">
-      <Filter>Archivos de encabezado\Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Fighter.h">
-      <Filter>Archivos de encabezado\Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Component.h">
-      <Filter>Archivos de encabezado\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="BounceOnBorderPC.h">
-      <Filter>Archivos de encabezado\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="BoundingBoxGC.h">
-      <Filter>Archivos de encabezado\Components\Graphic</Filter>
-    </ClInclude>
-    <ClInclude Include="DeactivateOnBorderExit.h">
-      <Filter>Archivos de encabezado\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphicsComponent.h">
-      <Filter>Archivos de encabezado\Components\Graphic</Filter>
-    </ClInclude>
-    <ClInclude Include="GunIC.h">
-      <Filter>Archivos de encabezado\Components\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageGC.h">
-      <Filter>Archivos de encabezado\Components\Graphic</Filter>
-    </ClInclude>
-    <ClInclude Include="InputComponent.h">
-      <Filter>Archivos de encabezado\Components\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="NaturalMovePC.h">
-      <Filter>Archivos de encabezado\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="PhysicsComponent.h">
-      <Filter>Archivos de encabezado\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="ReduceSpeedPC.h">
-      <Filter>Archivos de encabezado\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="RotatingPC.h">
-      <Filter>Archivos de encabezado\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="RotationIC.h">
-      <Filter>Archivos de encabezado\Components\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="ShowUpAtOppositeSidePC.h">
-      <Filter>Archivos de encabezado\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="StopOnBordersPC.h">
-      <Filter>Archivos de encabezado\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="ThrustIC.h">
-      <Filter>Archivos de encabezado\Components\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="GameCtrlIC.h">
-      <Filter>Archivos de encabezado\Components\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="LivesViewer.h">
-      <Filter>Archivos de encabezado\Components\Graphic</Filter>
-    </ClInclude>
-    <ClInclude Include="GameStatusViewGC.h">
-      <Filter>Archivos de encabezado\Components\Graphic</Filter>
-    </ClInclude>
-    <ClInclude Include="ScoreViewerGC.h">
-      <Filter>Archivos de encabezado\Components\Graphic</Filter>
-    </ClInclude>
-    <ClInclude Include="FighterAsteroidCollision.h">
-      <Filter>Archivos de encabezado\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="BulletsAsteroidsCollision.h">
-      <Filter>Archivos de encabezado\Components\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="InputHandler.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Worker.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Logger.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="BlockingQueue.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="resource.h">
-=======
-    <ClInclude Include="BlackHole.h">
-      <Filter>Archivos de encabezado\Game Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="BlackHoles.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="BulletBlackHoleCollision.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="FighterBlackHoleCollision.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="AsteroidBlackHoleCollision.h">
->>>>>>> BlackHoles
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AsteroidsGame.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="AudioManager.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Collisions.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Container.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Font.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="FontsManager.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjectPool.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Observer.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="RandomNumberGenerator.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Resources.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="SDLAudioManager.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="SDLFontsManager.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="SDLGame.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="SDLTexturesManager.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="ServiceLocator.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="SRandBasedGenerator.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="TexturesManager.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector2D.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="GameManager.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Component.cpp">
-      <Filter>Archivos de código fuente\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="BounceOnBorderPC.cpp">
-      <Filter>Archivos de código fuente\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="BoundingBoxGC.cpp">
-      <Filter>Archivos de código fuente\Components\Graphic</Filter>
-    </ClCompile>
-    <ClCompile Include="DeactivateOnBorderExit.cpp">
-      <Filter>Archivos de código fuente\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="GunIC.cpp">
-      <Filter>Archivos de código fuente\Components\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="NaturalMovePC.cpp">
-      <Filter>Archivos de código fuente\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsComponent.cpp">
-      <Filter>Archivos de código fuente\Components\Graphic</Filter>
-    </ClCompile>
-    <ClCompile Include="ImageGC.cpp">
-      <Filter>Archivos de código fuente\Components\Graphic</Filter>
-    </ClCompile>
-    <ClCompile Include="InputComponent.cpp">
-      <Filter>Archivos de código fuente\Components\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="PhysicsComponent.cpp">
-      <Filter>Archivos de código fuente\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="ReduceSpeedPC.cpp">
-      <Filter>Archivos de código fuente\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="RotatingPC.cpp">
-      <Filter>Archivos de código fuente\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="StopOnBordersPC.cpp">
-      <Filter>Archivos de código fuente\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="RotationIC.cpp">
-      <Filter>Archivos de código fuente\Components\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="ShowUpAtOppositeSidePC.cpp">
-      <Filter>Archivos de código fuente\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="ThrustIC.cpp">
-      <Filter>Archivos de código fuente\Components\Input</Filter>
-    </ClCompile>
     <ClCompile Include="Asteroid.cpp">
-      <Filter>Archivos de código fuente\Game Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Asteroids.cpp">
-      <Filter>Archivos de código fuente\Game Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>Archivos de código fuente\Game Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Bullets.cpp">
-      <Filter>Archivos de código fuente\Game Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="Fighter.cpp">
-      <Filter>Archivos de código fuente\Game Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="GameCtrlIC.cpp">
-      <Filter>Archivos de código fuente\Components\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="ScoreViewerGC.cpp">
-      <Filter>Archivos de código fuente\Components\Graphic</Filter>
-    </ClCompile>
-    <ClCompile Include="LivesViewer.cpp">
-      <Filter>Archivos de código fuente\Components\Graphic</Filter>
-    </ClCompile>
-    <ClCompile Include="GameStatusViewGC.cpp">
-      <Filter>Archivos de código fuente\Components\Graphic</Filter>
-    </ClCompile>
-    <ClCompile Include="FighterAsteroidCollision.cpp">
-      <Filter>Archivos de código fuente\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="BulletsAsteroidsCollision.cpp">
-      <Filter>Archivos de código fuente\Components\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="InputHandler.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Worker.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Logger.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="BlockingQueue.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="BlackHole.cpp">
-      <Filter>Archivos de código fuente\Game Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="BlackHoles.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="BulletBlackHoleCollision.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="FighterBlackHoleCollision.cpp">
-      <Filter>Archivos de código fuente</Filter>
+      <Filter>cpp\Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="AsteroidBlackHoleCollision.cpp">
-      <Filter>Archivos de código fuente</Filter>
+      <Filter>cpp\Components\Physics Components</Filter>
     </ClCompile>
+    <ClCompile Include="Asteroids.cpp">
+      <Filter>cpp\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackHole.cpp">
+      <Filter>cpp\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackHoles.cpp">
+      <Filter>cpp\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="BounceOnBorderPC.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundingBoxGC.cpp">
+      <Filter>cpp\Components\Graphic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>cpp\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletBlackHoleCollision.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullets.cpp">
+      <Filter>cpp\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletsAsteroidsCollision.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>cpp\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="DeactivateOnBorderExit.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="FighterAsteroidCollision.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="FighterBlackHoleCollision.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Fighter.cpp">
+      <Filter>cpp\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCtrlIC.cpp">
+      <Filter>cpp\Components\Input Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>cpp\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectPool.cpp">
+      <Filter>cpp\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsComponent.cpp">
+      <Filter>cpp\Components\Graphic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GunIC.cpp">
+      <Filter>cpp\Components\Input Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStatusViewGC.cpp">
+      <Filter>cpp\Components\Graphic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageGC.cpp">
+      <Filter>cpp\Components\Graphic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="InputComponent.cpp">
+      <Filter>cpp\Components\Input Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LivesViewer.cpp">
+      <Filter>cpp\Components\Graphic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Container.cpp">
+      <Filter>cpp\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="NaturalMovePC.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsComponent.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ReduceSpeedPC.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="RotatingPC.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="RotationIC.cpp">
+      <Filter>cpp\Components\Input Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreViewerGC.cpp">
+      <Filter>cpp\Components\Graphic Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowUpAtOppositeSidePC.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="StopOnBordersPC.cpp">
+      <Filter>cpp\Components\Physics Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ThrustIC.cpp">
+      <Filter>cpp\Components\Input Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AsteroidsGame.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioManager.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockingQueue.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Collisions.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="FontsManager.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Observer.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomNumberGenerator.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLAudioManager.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLFontsManager.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLGame.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLTexturesManager.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceLocator.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="SRandBasedGenerator.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="TexturesManager.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2D.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Worker.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Asteroid.h">
+      <Filter>h\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="AsteroidBlackHoleCollision.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Asteroids.h">
+      <Filter>h\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackHole.h">
+      <Filter>h\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackHoles.h">
+      <Filter>h\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="BounceOnBorderPC.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="BoundingBoxGC.h">
+      <Filter>h\Components\Graphic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>h\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletBlackHoleCollision.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullets.h">
+      <Filter>h\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletsAsteroidsCollision.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>h\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="DeactivateOnBorderExit.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FighterAsteroidCollision.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FighterBlackHoleCollision.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Fighter.h">
+      <Filter>h\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCtrlIC.h">
+      <Filter>h\Components\Input Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>h\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectPool.h">
+      <Filter>h\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsComponent.h">
+      <Filter>h\Components\Graphic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GunIC.h">
+      <Filter>h\Components\Input Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStatusViewGC.h">
+      <Filter>h\Components\Graphic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageGC.h">
+      <Filter>h\Components\Graphic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="InputComponent.h">
+      <Filter>h\Components\Input Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LivesViewer.h">
+      <Filter>h\Components\Graphic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Container.h">
+      <Filter>h\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="NaturalMovePC.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsComponent.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ReduceSpeedPC.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="RotatingPC.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="RotationIC.h">
+      <Filter>h\Components\Input Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreViewerGC.h">
+      <Filter>h\Components\Graphic Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowUpAtOppositeSidePC.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="StopOnBordersPC.h">
+      <Filter>h\Components\Physics Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ThrustIC.h">
+      <Filter>h\Components\Input Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AsteroidsGame.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockingQueue.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Collisions.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="FontsManager.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Messages_decl.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Messages_defs.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Observer.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomNumberGenerator.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="sdl_includes.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLAudioManager.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLFontsManager.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLGame.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLTexturesManager.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceLocator.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="SRandBasedGenerator.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="TexturesManager.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="Worker.h">
+      <Filter>h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="cpp">
+      <UniqueIdentifier>{a5cf646f-adac-4836-8989-825abd9fe85e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\Game Objects">
+      <UniqueIdentifier>{c453582d-176a-4b4b-b5af-582e3e7dcfd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h">
+      <UniqueIdentifier>{2ac2df42-dddc-4643-a912-527fcbab7b49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\Game Objects">
+      <UniqueIdentifier>{68db0ea7-3659-49c2-a142-097506ec82c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\Components">
+      <UniqueIdentifier>{7cd8a2fa-5742-4186-b2b8-1e51e84bdf58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\Components">
+      <UniqueIdentifier>{54ccf711-efb0-46ed-b852-8f2ec87c2b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\Components\Input Components">
+      <UniqueIdentifier>{e2e8fd7b-db14-4678-8cd5-9df49bf779fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\Components\Input Components">
+      <UniqueIdentifier>{5b5bb067-5468-42d5-be1c-e394487c3d30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\Components\Graphic Components">
+      <UniqueIdentifier>{1d5e7a34-d635-41e2-8005-29684baa490f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\Components\Graphic Components">
+      <UniqueIdentifier>{eda07ff7-7113-40af-850a-b28694fac9ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp\Components\Physics Components">
+      <UniqueIdentifier>{88606af9-ebcc-4749-8822-31db9d453ec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h\Components\Physics Components">
+      <UniqueIdentifier>{34a40401-c1ab-41c6-82bf-a02b94ed4394}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

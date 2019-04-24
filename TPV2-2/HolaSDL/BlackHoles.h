@@ -20,5 +20,6 @@ private:
 	void create(Vector2D pos);
 
 	int num_;
+	bool roundLost = true;
 };
 

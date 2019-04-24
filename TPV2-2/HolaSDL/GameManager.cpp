@@ -60,12 +60,16 @@ void GameManager::receive (const void * senderObj, const msg::Message & msg) {
 	switch (msg.type_) {
 	case msg::GAME_START:
 		gameOver_ = false;
+		if (winner_ != 2) // preserves score if fighter wins
+			score_ = 0;
 		winner_ = 0;
-		score_ = 0;
 		lives_ = maxLives_;
 		break;
 	case msg::ROUND_START:
 		running_ = true;
+		if (winner_ != 2) // preserves score if fighter wins
+			score_ = 0;
+		winner_ = 0;
 		game_->getServiceLocator ()->getAudios ()->playMusic (Resources::ImperialMarch);
 		Logger::instance ()->log ("Round Start");
 		break;

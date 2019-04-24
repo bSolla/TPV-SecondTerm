@@ -33,7 +33,7 @@ private:
 	static int const maxLives_ = 3;
 	bool running_;
 	bool gameOver_;
-	int score_;
+	int score_ = 0;
 	int lives_;
 	int winner_; // 0=none, 1=asteroids, 2=fighter
 	
