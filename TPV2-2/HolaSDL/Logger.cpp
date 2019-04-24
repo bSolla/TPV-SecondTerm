@@ -15,5 +15,6 @@ void Logger::log(function<string()> f)
 
 Logger::~Logger()
 {
+	log_.close ();
 }
 
